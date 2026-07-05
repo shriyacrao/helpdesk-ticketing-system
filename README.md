@@ -1,8 +1,13 @@
 # IT Help Desk Ticketing System (MERN)
 
 A full-stack ticketing system where users submit IT support tickets, and
-agents/admins triage, assign, comment on, and resolve them. Built with
-MongoDB, Express, React, and Node (MERN).
+agents/admins triage, assign, comment on, and resolve them. Built with MongoDB Atlas, Express.js, React, Node.js, JWT Authentication, Render, and Vercel.
+
+## Live Demo
+https://helpdesk-ticketing-system-orcin.vercel.app
+
+## GitHub Repository
+https://github.com/shriyacrao/helpdesk-ticketing-system
 
 ## Features
 
@@ -18,6 +23,14 @@ MongoDB, Express, React, and Node (MERN).
 
 - **Frontend:** React 18, React Router, Axios, Recharts, plain CSS
 - **Backend:** Node.js, Express, Mongoose (MongoDB), JSON Web Tokens, bcryptjs
+
+## Deployment
+
+Frontend: Vercel
+
+Backend: Render
+
+Database: MongoDB Atlas
 
 ## Project Structure
 
@@ -111,27 +124,6 @@ Use one of the seeded accounts:
 
 Or register a new account (public registration always creates a `user` role;
 promote to agent/admin via the admin's "Manage Users" page).
-
-## How to Explain This Project (quick script)
-
-> "It's a help desk ticketing system, like a mini Zendesk. Regular users
-> submit support tickets. IT agents and admins see all tickets, can change
-> their status, priority, and assign them to a specific agent. Everyone can
-> comment on a ticket to track the conversation. There's a dashboard that
-> shows ticket counts by status and category using charts. It's a MERN app:
-> React frontend talking to an Express/Node REST API, MongoDB for storage,
-> and JWT for authentication with role-based access control (user/agent/admin)."
-
-Key concepts you should be ready to explain:
-- **JWT auth**: on login, server signs a token containing the user id; the
-  frontend stores it in localStorage and sends it in the `Authorization`
-  header on every request; the backend middleware (`auth.js`) verifies it.
-- **Role-based access control**: `roleCheck.js` middleware restricts routes
-  (e.g. only admins can change user roles); controller logic also checks
-  role to decide what a user can update on a ticket.
-- **REST API structure**: routes → controllers → models (MVC-ish pattern).
-- **MongoDB schema**: Ticket references User via `createdBy`/`assignedTo`
-  (ObjectId + `populate()` to join data).
 
 ## API Overview
 
