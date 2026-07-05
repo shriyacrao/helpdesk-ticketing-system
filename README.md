@@ -1,7 +1,8 @@
 # IT Help Desk Ticketing System (MERN)
 
 A full-stack ticketing system where users submit IT support tickets, and
-agents/admins triage, assign, comment on, and resolve them. Built with MongoDB Atlas, Express.js, React, Node.js, JWT Authentication, Render, and Vercel.
+agents/admins triage, assign, comment on, and resolve them. 
+Built using the MERN stack (MongoDB Atlas, Express.js, React, Node.js) with JWT authentication. The application is deployed on Render (backend) and Vercel (frontend).
 
 ## Live Demo
 https://helpdesk-ticketing-system-orcin.vercel.app
@@ -115,15 +116,7 @@ Your browser should open `http://localhost:3000`.
 
 ### 3. Log in
 
-Use one of the seeded accounts:
-| Role  | Email               | Password    |
-|-------|---------------------|-------------|
-| Admin | admin@helpdesk.com  | password123 |
-| Agent | agent@helpdesk.com  | password123 |
-| User  | user@helpdesk.com   | password123 |
-
-Or register a new account (public registration always creates a `user` role;
-promote to agent/admin via the admin's "Manage Users" page).
+Register a new account to start using the application.
 
 ## API Overview
 
